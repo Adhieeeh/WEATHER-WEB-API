@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-card">
+        <h2>Weather Dashboard</h2>
+        
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name... (e.g., London)">
+            <button id="searchBtn" class="primary-btn">Search</button>
+        </div>
+        
+        <div class="divider">OR</div>
+        <button id="geoBtn" class="secondary-btn">📍 Detect My Location</button>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <div class="weather-info hidden" id="weatherInfo">
+            <h3 id="locationName">City Name</h3>
+            <div class="temp-display">
+                <span id="temperature">--</span>°C
+            </div>
+            <div class="condition" id="conditionText">Clear Sky</div>
+            
+            <div class="details-grid">
+                <div class="detail-item">
+                    <span class="label">Humidity</span>
+                    <span class="value" id="humidity">--%</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">Wind Speed</span>
+                    <span class="value" id="windSpeed">-- km/h</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

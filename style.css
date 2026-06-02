@@ -1,0 +1,101 @@
+body {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: #ffffff;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    width: 360px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h2 { margin-top: 0; font-weight: 600; }
+
+.search-box {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+}
+
+input::placeholder { color: #ddd; }
+input:focus { outline: 2px solid #60a5fa; background: rgba(255, 255, 255, 0.3); }
+
+button {
+    border: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.primary-btn { background-color: #3b82f6; color: white; }
+.primary-btn:hover { background-color: #2563eb; }
+
+.divider { margin: 15px 0; font-size: 0.8rem; color: #93c5fd; opacity: 0.8; }
+
+.secondary-btn {
+    width: 100%;
+    background-color: #10b981;
+    color: white;
+}
+.secondary-btn:hover { background-color: #059669; }
+
+.error-message {
+    color: #f87171;
+    font-size: 0.9rem;
+    margin-top: 15px;
+}
+
+.hidden { display: none !important; }
+
+.weather-info {
+    margin-top: 30px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.temp-display { font-size: 4rem; font-weight: bold; margin: 10px 0; }
+.condition { font-size: 1.2rem; color: #bfdbfe; margin-bottom: 25px; }
+
+.details-grid {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.detail-item .label { font-size: 0.85rem; color: #93c5fd; }
+.detail-item .value { font-size: 1.1rem; font-weight: bold; margin-top: 5px; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
